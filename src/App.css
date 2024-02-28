@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-size: 1.01rem;
+}
+html {
+  font-family: "Montserrat", sans-serif;
+  
+}
+body {
+  background: #eee;
+  padding: 0 16px;
+}
+.App{
+  width: 68vw;
+  padding: 1rem;
+  margin: 3rem auto;
+  /* text-align: center; */
+
+}
+header{
+  background-color: #153D7D;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  /* margin-bottom: 1rem; */
+  text-align: center;
+  border-radius: 0.8rem;
+}
+
+.header h3, .header p {
+  color: #FFF;
+  margin-bottom: 0.5rem;
+}
+.heading {
+  margin-top: 20px;
+}
+.h3, h3 {
+  font-size: 1.75rem;
+}
+
+form {
+  position: relative;
+
+  background: #fff;
+  padding: 15px;
+  
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+.fields{
+  display: flex;
+  margin: 1.2rem ;
+  flex-wrap: wrap;
+
+}
+.task{
+  margin-right: 2vw;
+}
+.task input{
+  height:  2rem;
+  width: 28vw;
+  padding: 0.7rem;
+}
+select{
+  height: 2rem;
+  width: 28vw;
+  padding: 0.2rem;
+}
+.textarea{
+  margin-top: 1rem;
+}
+.textarea textarea{
+  width: 58vw;
+  height: 6rem;
+  padding: 0.7rem;
+}
+.notes{
+  position: relative;
+
+  background: #fff;
+  padding-left: 15px;
+  
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+.eachItem {
+  background: #fff;
+  /* padding: 1.2rem 1rem; */
+  border-radius: 0.5rem;
+  margin-bottom: 0.7rem;
+  /* margin-left: 1rem; */
+  /* min-width: 40rem; */
+  word-break: break-word;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contents{
+  width:49vw;
+  padding: 0.6rem;
+}
+.buttons{
+  margin-right: 1.1rem;
+}
+.notes button {
+  position: relative;
+  /* float: right; */
+  margin-right: 10px;
+  color: #FFF;
+  border: none;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  outline: none;
+  /* background-color: red; */
+  
+}
+.span{
+  margin-left: 1.6rem;
+}
+.badge {
+  display: inline-block;
+  padding: .25em .4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25rem;
+}
+.textBlue{
+  color: #153D7D;
+  font-size: 0.95rem;
+}
