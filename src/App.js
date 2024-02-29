@@ -6,11 +6,11 @@ import Note from './components/Note';
 import { useState } from 'react';
 
 function App() {
+  // Using the useState hook to declare a state variable named as notes and a function named setNotes to update its value.
   const [notes, setNotes] = useState([]);
-  const [updateState, setUpdateState] = useState(-1);
 
   //Implementing the add note functionality
-  function addNote(newNote){
+  function addNote(newNote){  
     setNotes(prevNotes =>{
       return [...prevNotes,  newNote ];
     })
@@ -24,13 +24,17 @@ function deleteNote(id ){
     })
   })
 }
+
   return (
     <div className="App">
      <Header/>
      <CreateArea
-      onAdd = {addNote}
+      onAdd = {addNote} //Passing props to a CreateArea child component 
      />
-     {notes.map((noteItem, index) =>{
+
+     {/* Using map function to iterate over each item in array of notes and display them using Note component */}
+     {notes.map((noteItem, index) =>{ 
+      /* noteItem represents each individual item in the notes array and index represents the index of the current item being processed */
       return(
         <Note
         key={index} id={index}

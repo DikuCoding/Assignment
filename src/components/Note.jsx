@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { FaCheck } from "react-icons/fa";
 
 const Note = (props) => {
@@ -37,9 +37,9 @@ if (props.priority === 'Low') {
     props.onDelete(props.id)
   }
 
-
-
   return (
+    // Displaying the items
+    
     <div className='notes'>
     <div className="eachItem">
     <div className="contents">

@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
 
 const CreateArea = (props) => {
+  // Using the useState hook to declare a state variable named note and a function named as setNote to update its value.
     const [note, setNote] = useState({
+      // initializing state object
         task: "",
         priority:"",
         description: ""
     })
+    // Handling input changes for each field in the note object.
     const handleChange=(event)=>{
-        const {name, value} = event.target;
+        const {name, value} = event.target; // using object destructuring to access these properties
 
         setNote((prevNote)=>{
             return{
@@ -16,23 +19,24 @@ const CreateArea = (props) => {
             }
         })
     }
+    //Adding the notes when user clicks on add button
     const submitNote =(event)=>{
-        if(!note.task){
+        if(!note.task || !note.description){
             alert("Please fill the data");
           }
           else{
-
+            props.onAdd(note)
               //setting the content to empty
               setNote({
                   task: "",
                   priority:"",
                   description: ""
                 })
-                props.onAdd(note)
             }
-                event.preventDefault();
+                event.preventDefault(); //preventing the default behaviour of form submission 
     }
   return (
+    //Creating input fields to take inputs and a button to submit them
     <div className='inputArea'>
       <form>
       <div className="fields">
@@ -48,6 +52,7 @@ const CreateArea = (props) => {
             <option value="High">High</option>
         </select>
      </div>
+
        <div className="textarea">
         <textarea name="description" id="" cols="30" rows="4" placeholder='Enter your description'
         onChange={handleChange}

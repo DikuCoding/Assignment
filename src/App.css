@@ -3,11 +3,9 @@
   margin: 0;
   box-sizing: border-box;
   list-style: none;
-  font-size: 1.01rem;
 }
 html {
   font-family: "Montserrat", sans-serif;
-  
 }
 body {
   background: #eee;
@@ -18,7 +16,6 @@ body {
   padding: 1rem;
   margin: 3rem auto;
   /* text-align: center; */
-
 }
 header{
   background-color: #153D7D;
@@ -39,20 +36,20 @@ header{
 .h3, h3 {
   font-size: 1.75rem;
 }
-
+.inputArea {
+  padding-bottom: 3vh;
+}
 form {
   position: relative;
-
   background: #fff;
-  padding: 15px;
-  
+  padding: 0.1rem;
+  padding-bottom: 0.8rem;
   box-shadow: 0 1px 5px rgb(138, 137, 137);
 }
 .fields{
   display: flex;
   margin: 1.2rem ;
   flex-wrap: wrap;
-
 }
 .task{
   margin-right: 2vw;
@@ -132,4 +129,35 @@ select{
 .textBlue{
   color: #153D7D;
   font-size: 0.95rem;
+}
+@media (max-width: 1300px){
+  .App{
+    width: 96vw;
+    margin: 0.3rem auto;
+    height: 52vh;
+  }
+  .inputArea {
+    padding-bottom: 2vh;
+  }
+  .fields{
+    height: 19vh;
+    padding-left: 0.4rem;
+  }
+  input, select , textarea{
+    font-size: 0.52rem;
+  }
+  .header h3,p{
+    font-size: 0.7rem;
+  }
+  .task{
+    width: 39vw;
+  }
+  /* .priority{
+    margin-top: 2vh;
+  } */
+  .btn{
+    margin-top: 1.99rem;
+    height: 1.7rem;
+    font-size: 0.7rem;
+  }
 }
